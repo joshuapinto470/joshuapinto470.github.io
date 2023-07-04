@@ -32,3 +32,7 @@ body,
 .custom-shape-divider-top-1688470763 .shape-fill {
     fill: #FFFFFF;
 }
+
+.hero-page {
+    background-image: url('/grid.svg');
+}
