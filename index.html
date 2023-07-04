@@ -18,8 +18,20 @@
       </ul>
     </div>
 
-    <div id="about" class="h-full flex flex-col justify-center items-center">
-      <div class=" bg-purple-400 rounded-full p-3">
+    <div id="about" class="h-full relative flex flex-col justify-center items-center">
+      <div class="absolute z-[-1] blur-2xl opacity-50">
+
+        <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+          <g transform="translate(456.3573873234408 275.1535836099143)">
+            <path
+              d="M154.7 -156.9C184.1 -125.4 180 -62.7 184 4C188 70.7 200.1 141.4 170.8 184.8C141.4 228.1 70.7 244 17.7 226.4C-35.4 208.7 -70.7 157.4 -112.4 114C-154 70.7 -202 35.4 -202.6 -0.6C-203.2 -36.5 -156.4 -73.1 -114.7 -104.6C-73.1 -136.1 -36.5 -162.5 13.1 -175.6C62.7 -188.7 125.4 -188.4 154.7 -156.9"
+              fill="#C084FC"></path>
+          </g>
+        </svg>
+      </div>
+
+      <div>
         <h1 class="text-8xl text-center mb-4 text-primary-text font-Poppins">Joshua Pinto</h1>
         <p class="text-center text-xl p-3 text-primary-text">joshuapinto470@gmail.com</p>
         <div class="flex flex-wrap gap-5 justify-center mt-7 p-3 bg-[#EEEDE7] rounded-3xl w-fit m-auto px-5 shadow-md">
@@ -35,7 +47,8 @@
     </div>
 
     <div id="projects" class="h-fit flex flex-col pb-5">
-      <h1 class="text-6xl text-center mb-4 mt-4 text-slate-950 font-Poppins bg-red-500 rounded-full w-fit m-auto p-5">Projects</h1>
+      <h1 class="text-6xl text-center mb-4 mt-4 text-slate-950 font-Poppins bg-red-500 rounded-full w-fit m-auto p-5">
+        Projects</h1>
       <!-- Projects Container  -->
       <div class="flex h-fit flex-wrap gap-7 justify-center mt-10 max-w-[90%] m-auto">
 
@@ -102,10 +115,18 @@
         </div>
 
       </div>
+
     </div>
 
-    <footer id="contact" class="flex flex-col bg-[#dad9d7] text-primary-text">
-      <h1 class="text-4xl mb-5 mt-4 text-center">Contact Me</h1>
+    <footer id="contact" class="flex flex-col bg-blue-600 text-slate-200 relative">
+      <div class="custom-shape-divider-top-1688470763">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"></path>
+        </svg>
+      </div>
+      <h1 class="text-4xl mb-5 mt-10 pt-2 text-center">Contact Me</h1>
       <div class="flex flex-col ml-2">
         <p>Email: <span>joshuapinto470@gmail.com</span></p>
         <p>Github: <span><a href="https://github.com/joshuapinto470">joshuapinto470</a></span></p>

@@ -10,4 +10,25 @@ body,
     padding: 0;
     height: 100%;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.custom-shape-divider-top-1688470763 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1688470763 svg {
+    position: relative;
+    display: block;
+    width: calc(124% + 1.3px);
+    height: 58px;
+}
+
+.custom-shape-divider-top-1688470763 .shape-fill {
+    fill: #FFFFFF;
 }
