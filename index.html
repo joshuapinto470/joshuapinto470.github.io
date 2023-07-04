@@ -6,8 +6,8 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joshua Pinto</title>
-  <script type="module" crossorigin src="/assets/index-60ccacfe.js"></script>
-  <link rel="stylesheet" href="/assets/index-5facd060.css">
+  <script type="module" crossorigin src="/assets/index-d6279367.js"></script>
+  <link rel="stylesheet" href="/assets/index-d95f81ee.css">
 </head>
 
 <body>
@@ -21,8 +21,7 @@
     </div>
 
     <div id="about" class="h-full relative flex flex-col justify-center items-center">
-      <div class="absolute z-[-1] blur-2xl opacity-50">
-
+      <div class="absolute z-[-1] mix-blend-overlay blur-2xl">
         <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
           <g transform="translate(456.3573873234408 275.1535836099143)">
@@ -35,10 +34,12 @@
 
       <div>
         <h1 class="text-8xl text-center mb-4 text-primary-text font-Poppins">Joshua Pinto</h1>
-        <p class="text-center text-xl p-3 text-primary-text">joshuapinto470@gmail.com</p>
+        <a class="text-primary-text" href="mailto: joshuapinto.470@gmail.com">
+          <p class="text-center text-xl p-3"><span class="text-black font-Poppins">joshuapinto470</span>@gmail.com</p>
+        </a>
         <div class="flex flex-wrap gap-5 justify-center mt-7 p-3 bg-[#EEEDE7] rounded-3xl w-fit m-auto px-5 shadow-md">
           <img class="h-10" src="/cpp_icon.svg" alt="c++" />
-          <img class="h-10" src="/linux_icon.svg" alt="linux" />
+          <img class="h-10 hidden md:block" src="/linux_icon.svg" alt="linux" />
           <img class="h-10" src="/javascript_icon.svg" alt="javascript" />
           <img class="h-10" src="/react_icon.svg" alt="react" />
           <img class="h-10" src="/mongodb_icon.svg" alt="mongodb">
@@ -48,7 +49,13 @@
       </div>
     </div>
 
-    <div id="projects" class="h-fit flex flex-col pb-5">
+    <div id="projects" class="h-fit flex flex-col pb-5 relative">
+      <!-- <div class="absolute z-[-1] left-0 right-0 top-0 bottom-0 mx-auto my-auto">
+        <img src="/Wave Line.svg" class="w-full"/>
+      </div> -->
+      <div class="hidden sm:hidden lg:block lg:absolute sm:z-[-1]">
+        <img src="/blob2-haikei.svg" alt="blob-haikei-outlined" class="w-full m-auto">
+      </div>
       <h1 class="text-6xl text-center mb-4 mt-4 text-slate-950 font-Poppins bg-red-500 rounded-full w-fit m-auto p-5">
         Projects</h1>
       <!-- Projects Container  -->
@@ -56,7 +63,7 @@
 
         <!-- Card -->
         <div
-          class="transition-all ease-in max-w-sm p-6 bg-white border rounded-lg shadow hover:shadow-md hover:bg-slate-50">
+          class="transition-all ease-in max-w-sm p-6 bg-white border rounded-xl shadow hover:shadow-md hover:bg-slate-50">
           <a href="https://github.com/joshuapinto470/CUDA-Slime-Mould">
             <h5 class="mb-2 text-4xl font-semibold tracking-tighter text-primary-text text-center">Slime Mould
               Simulation</h1>
@@ -72,7 +79,7 @@
 
         <!-- Card -->
         <div class="transition-all ease-in max-w-sm p-6 flex flex-col justify-between
-        bg-white border rounded-lg shadow hover:shadow-md hover:bg-slate-50">
+        bg-white border rounded-xl shadow hover:shadow-md hover:bg-slate-50">
           <a href="https://github.com/joshuapinto470/Chipper">
             <h5 class="mb-2 text-4xl font-semibold tracking-tighter text-primary-text text-center">Chipper</h1>
           </a>
@@ -89,7 +96,7 @@
 
         <!-- Card -->
         <div class="transition-all ease-in max-w-lg p-6 flex flex-col justify-between  
-        bg-white border rounded-lg shadow hover:shadow-md hover:bg-slate-50">
+        bg-white border rounded-xl shadow hover:shadow-md hover:bg-slate-50">
           <a href="https://github.com/joshuapinto470/CUDA-Mandelbrot-Set">
             <h5 class="mb-2 text-4xl font-semibold tracking-tighter text-primary-text text-center">Mandelbrot Set</h1>
           </a>
@@ -103,7 +110,7 @@
         </div>
 
         <div class="transition-all ease-in max-w-lg p-6 flex flex-col justify-between
-        bg-white border rounded-lg shadow hover:shadow-md hover:bg-slate-50">
+        bg-white border rounded-xl shadow hover:shadow-md hover:bg-slate-50">
           <a href="https://github.com/joshuapinto470/joshuapinto470.github.io">
             <h5 class="mb-2 text-4xl font-semibold tracking-tighter text-primary-text text-center">Portfolio Site</h1>
           </a>
@@ -130,7 +137,7 @@
       </div>
       <h1 class="text-4xl mb-5 mt-10 pt-2 text-center">Contact Me</h1>
       <div class="flex flex-col ml-2">
-        <p>Email: <span>joshuapinto470@gmail.com</span></p>
+        <a href="mailto: joshuapinto.470@gmail.com"><span>Send Email</span></a>
         <p>Github: <span><a href="https://github.com/joshuapinto470">joshuapinto470</a></span></p>
       </div>
       <small class="text-center py-2 mb-2">All icons belong to their owners respectively</small>
