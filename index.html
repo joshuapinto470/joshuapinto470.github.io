@@ -3,94 +3,118 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
-  <script type="module" crossorigin src="/assets/index-e15e9651.js"></script>
-  <link rel="stylesheet" href="/assets/index-aeaca9ee.css">
+  <title>Joshua Pinto</title>
+  <script type="module" crossorigin src="/assets/index-5f64dc20.js"></script>
+  <link rel="stylesheet" href="/assets/index-ba7d56f2.css">
 </head>
 
 <body>
   <div id="app">
     <div>
       <ul class="flex justify-center lg:justify-end gap-2 pr-4 pt-3 text-center font-Poppins">
-        <li class="bg-black p-2 rounded-md text-white hover:bg-blue-600"><a href="#app">About</a></li>
-        <li class="bg-black p-2 rounded-md text-white hover:bg-blue-600"><a href="#projects">Projects</a></li>
-        <li class="bg-black p-2 rounded-md text-white hover:bg-blue-600"><a href="#contact">Contact</a></li>
+        <li class="bg-primary-text p-2 rounded-md text-white hover:bg-blue-600"><a href="#app">About</a></li>
+        <li class="bg-primary-text p-2 rounded-md text-white hover:bg-blue-600"><a href="#projects">Projects</a></li>
+        <li class="bg-primary-text p-2 rounded-md text-white hover:bg-blue-600"><a href="#contact">Contact</a></li>
       </ul>
     </div>
 
     <div id="about" class="h-full flex flex-col justify-center items-center">
-      <div>
+      <div class=" bg-purple-400 rounded-full p-3">
         <h1 class="text-8xl text-center mb-4 text-primary-text font-Poppins">Joshua Pinto</h1>
         <p class="text-center text-xl p-3 text-primary-text">joshuapinto470@gmail.com</p>
+        <div class="flex flex-wrap gap-5 justify-center mt-7 p-3 bg-[#EEEDE7] rounded-3xl w-fit m-auto px-5 shadow-md">
+          <img class="h-10" src="/cpp_icon.svg" alt="c++" />
+          <img class="h-10" src="/linux_icon.svg" alt="linux" />
+          <img class="h-10" src="/javascript_icon.svg" alt="javascript" />
+          <img class="h-10" src="/react_icon.svg" alt="react" />
+          <img class="h-10" src="/mongodb_icon.svg" alt="mongodb">
+          <img class="h-10" src="/tailwind_icon.svg" alt="tailwind" />
+          <img class="h-10" src="/nodejs_icon.svg" alt="nodejs" />
+        </div>
       </div>
     </div>
 
     <div id="projects" class="h-fit flex flex-col pb-5">
-      <h1 class="text-6xl text-center mb-4 mt-4 text-slate-950 font-Poppins">Projects</h1>
+      <h1 class="text-6xl text-center mb-4 mt-4 text-slate-950 font-Poppins bg-red-500 rounded-full w-fit m-auto p-5">Projects</h1>
       <!-- Projects Container  -->
-      <div class="flex h-fit flex-wrap gap-7 justify-center mt-10">
+      <div class="flex h-fit flex-wrap gap-7 justify-center mt-10 max-w-[90%] m-auto">
 
         <!-- Card -->
-        <div class="max-w-sm p-6 bg-white border rounded-lg shadow hover:shadow-md">
+        <div
+          class="transition-all ease-in max-w-sm p-6 bg-white border rounded-lg shadow hover:shadow-md hover:bg-slate-50">
           <a href="https://github.com/joshuapinto470/CUDA-Slime-Mould">
             <h5 class="mb-2 text-4xl font-semibold tracking-tighter text-primary-text text-center">Slime Mould
               Simulation</h1>
           </a>
           <p class="mb-3 text-xl font-normal text-slate-900 text-center">A simulation of physarum movement that looks
             mesmerising. Written in CUDA.</p>
-          <div id="tags" class="flex gap-3 justify-center ">
-            <img class="h-10" src="/cpp_icon.svg" />
-            <img class="h-10" src="/nvidia_icon.svg" />
-            <img class="h-10" src="/linux_icon.svg" />
+          <div id="tags" class="flex gap-3 justify-center bg-[#EEEDE7] p-2 w-fit mx-auto rounded-3xl">
+            <img class="h-10" src="/cpp_icon.svg" alt="cpp" />
+            <img class="h-10" src="/nvidia_icon.svg" alt="CUDA" />
+            <img class="h-10" src="/linux_icon.svg" alt="linux" />
           </div>
         </div>
 
         <!-- Card -->
-        <div class="max-w-sm p-6  bg-white border rounded-lg shadow hover:shadow-md">
+        <div class="transition-all ease-in max-w-sm p-6 flex flex-col justify-between
+        bg-white border rounded-lg shadow hover:shadow-md hover:bg-slate-50">
           <a href="https://github.com/joshuapinto470/Chipper">
             <h5 class="mb-2 text-4xl font-semibold tracking-tighter text-primary-text text-center">Chipper</h1>
           </a>
           <p class="mb-3 text-xl font-normal text-slate-900 text-center">Clone of Twitter. Written in React and
             Express.js and using mongoDB</p>
-          <div id="tags" class="flex gap-3 justify-center ">
-            <img class="h-10" src="/javascript_icon.svg" />
-            <img class="h-10" src="/react_icon.svg" />
-            <img class="h-10" src="/tailwind_icon.svg" />
-            <img class="h-10" src="/nodejs_icon.svg" alt="" />
+          <div id="tags" class="flex gap-3 justify-center bg-[#EEEDE7] rounded-3xl p-3 w-fit mx-auto ">
+            <img class="h-10" src="/javascript_icon.svg" alt="javascript" />
+            <img class="h-10" src="/react_icon.svg" alt="react" />
+            <img src="/mongodb_icon.svg" alt="mongodb" class="h-10">
+            <img class="h-10" src="/tailwind_icon.svg" alt="tailwind" />
+            <img class="h-10" src="/nodejs_icon.svg" alt="nodejs" />
           </div>
         </div>
 
         <!-- Card -->
-        <div class="max-w-lg p-6  bg-white border rounded-lg shadow hover:shadow-md ">
-          <a href="https://github.com/joshuapinto470/CUDA-Slime-Mould">
+        <div class="transition-all ease-in max-w-lg p-6 flex flex-col justify-between  
+        bg-white border rounded-lg shadow hover:shadow-md hover:bg-slate-50">
+          <a href="https://github.com/joshuapinto470/CUDA-Mandelbrot-Set">
             <h5 class="mb-2 text-4xl font-semibold tracking-tighter text-primary-text text-center">Mandelbrot Set</h1>
           </a>
-          <p class="mb-3 text-xl font-normal text-slate-900 text-center">Generate the Mandelbrot set in CUDA.</p>
-          <div id="tags" class="flex gap-3 justify-center ">
-            <img class="h-10" src="/cpp_icon.svg" />
-            <img class="h-10" src="/nvidia_icon.svg" />
-            <img class="h-10" src="/linux_icon.svg" />
+          <p class="mb-3 text-xl font-normal text-slate-900 text-center">Generate the Mandelbrot set in CUDA.</br> Needs
+            a Nvidia GPU</p>
+          <div id="tags" class="flex gap-3 justify-center bg-[#EEEDE7] p-3 w-fit mx-auto rounded-3xl">
+            <img class="h-10" src="/cpp_icon.svg" alt="cpp" />
+            <img class="h-10" src="/nvidia_icon.svg" alt="nvidia" />
+            <img class="h-10" src="/windows_logo.svg" alt="windows" />
+          </div>
+        </div>
+
+        <div class="transition-all ease-in max-w-lg p-6 flex flex-col justify-between
+        bg-white border rounded-lg shadow hover:shadow-md hover:bg-slate-50">
+          <a href="https://github.com/joshuapinto470/joshuapinto470.github.io">
+            <h5 class="mb-2 text-4xl font-semibold tracking-tighter text-primary-text text-center">Portfolio Site</h1>
+          </a>
+          <p class="mb-3 text-xl font-normal text-slate-900 text-center">My current portfolio website. Build using HTML,
+            Tailwindcss and Vite.</p>
+          <div id="tags" class="flex gap-3 justify-center bg-[#EEEDE7] p-3 w-fit mx-auto rounded-3xl">
+            <img src="/html_icon.svg" alt="html icon" class="h-10" alt="html">
+            <img src="/vite.svg" alt="vite" class="h-10" alt="vite">
+            <img class="h-10" src="/tailwind_icon.svg" />
           </div>
         </div>
 
       </div>
     </div>
 
-    <div id="contact" class="flex flex-col items-center bg-blue-950 text-white">
-      <h1 class="text-4xl mb-5 mt-4">Contact Me</h1>
-      <div class="flex gap-5">
-        <a href="#" class="">
-          <img class="h-10" src="/gmail_icon.svg" alt="">
-        </a>
-
-        <a href="https://github.com/joshuapinto470" class="">
-          <img class="h-10" src="/github_icon.svg" alt="">
-        </a>
+    <footer id="contact" class="flex flex-col bg-[#dad9d7] text-primary-text">
+      <h1 class="text-4xl mb-5 mt-4 text-center">Contact Me</h1>
+      <div class="flex flex-col ml-2">
+        <p>Email: <span>joshuapinto470@gmail.com</span></p>
+        <p>Github: <span><a href="https://github.com/joshuapinto470">joshuapinto470</a></span></p>
       </div>
-    </div>
+      <small class="text-center py-2 mb-2">All icons belong to their owners respectively</small>
+    </footer>
+
   </div>
   
 </body>
