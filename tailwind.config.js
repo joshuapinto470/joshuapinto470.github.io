@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily : {
         'Poppins' : ['Poppins', 'sans-serif'],
+        'Roboto' : ['Roboto', 'Arial', 'sans-serif']
       },
       colors : {
         'primary-text' : '#33333d',
