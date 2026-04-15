@@ -3,177 +3,248 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joshua Pinto</title>
-  <meta name="description" content="My Portfolio.">
-  <!-- Google tag (gtag.js) -->
+  <title>Joshua Pinto | Software Engineer</title>
+  <meta name="description" content="The personal portfolio and projects of Joshua Pinto.">
+  <link rel="stylesheet" href="/style.css">
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5181E0W0G"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-F5181E0W0G');
   </script>
 </head>
 
-<body>
-  <div id="app">
-    <div>
-      <ul class="flex justify-center lg:justify-end gap-2 pr-4 pt-3 text-center font-Poppins">
-        <li class="bg-primary-text p-2 rounded-md text-white hover:bg-blue-600"><a href="#app">About</a></li>
-        <li class="bg-primary-text p-2 rounded-md text-white hover:bg-blue-600"><a href="#projects">Projects</a></li>
-        <li class="bg-primary-text p-2 rounded-md text-white hover:bg-blue-600"><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+<body class="bg-slate-50 text-slate-800 scroll-smooth antialiased selection:bg-indigo-100 selection:text-indigo-900">
+  <div id="app" class="relative">
 
-    <div id="about" class="h-full relative flex flex-col justify-center items-center">
-      <div class="absolute z-[-1] mix-blend-overlay blur-2xl">
-        <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-          <g transform="translate(456.3573873234408 275.1535836099143)">
-            <path
-              d="M154.7 -156.9C184.1 -125.4 180 -62.7 184 4C188 70.7 200.1 141.4 170.8 184.8C141.4 228.1 70.7 244 17.7 226.4C-35.4 208.7 -70.7 157.4 -112.4 114C-154 70.7 -202 35.4 -202.6 -0.6C-203.2 -36.5 -156.4 -73.1 -114.7 -104.6C-73.1 -136.1 -36.5 -162.5 13.1 -175.6C62.7 -188.7 125.4 -188.4 154.7 -156.9"
-              fill="#C084FC"></path>
-          </g>
-        </svg>
-      </div>
+    <header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-md border-b border-slate-200">
+      <nav aria-label="Main Navigation" class="max-w-6xl mx-auto px-6 py-4">
+        <ul class="flex justify-center md:justify-end gap-8 text-sm font-medium font-Poppins">
+          <li><a href="#about" class="text-slate-600 hover:text-indigo-600 transition-colors">About</a></li>
+          <li><a href="#projects" class="text-slate-600 hover:text-indigo-600 transition-colors">Projects</a></li>
+          <li><a href="#contact" class="text-slate-600 hover:text-indigo-600 transition-colors">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <div>
-        <h1 class="text-6xl sm:text-8xl text-center mb-4 text-primary-text font-Poppins">Joshua Pinto</h1>
-        <a class="text-primary-text" href="mailto: joshuapinto.470@gmail.com">
-          <p class="text-center text-xl p-3 font-Roboto"><span
-              class="text-black font-Poppins">joshuapinto470</span>@gmail.com</p>
-        </a>
-        <div class="flex flex-wrap gap-5 justify-center mt-7 p-3 bg-[#EEEDE7] rounded-3xl w-fit m-auto px-5 shadow-md">
-          <img class="h-10" src="/cpp_icon.svg" alt="c++" title="cpp" />
-          <img class="h-10 hidden md:block" src="/linux_icon.svg" alt="linux" title="linux" />
-          <img class="h-10" src="/javascript_icon.svg" alt="javascript" title="javascript" />
-          <img class="h-10" src="/react_icon.svg" alt="react" title="react" />
-          <img class="h-10" src="/mongodb_icon.svg" alt="mongodb" title="mongodb">
-          <img class="h-10" src="/tailwind_icon.svg" alt="tailwind" title="tailwindcss" />
-          <img class="h-10" src="/nodejs_icon.svg" alt="nodejs" title="nodejs" />
+    <main>
+      <section id="about"
+        class="relative flex flex-col justify-center items-center min-h-screen pt-20 px-4 overflow-hidden">
+        <div class="absolute z-[-1] opacity-40 mix-blend-multiply blur-3xl" aria-hidden="true">
+          <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+            <g transform="translate(456.3573873234408 275.1535836099143)">
+              <path
+                d="M154.7 -156.9C184.1 -125.4 180 -62.7 184 4C188 70.7 200.1 141.4 170.8 184.8C141.4 228.1 70.7 244 17.7 226.4C-35.4 208.7 -70.7 157.4 -112.4 114C-154 70.7 -202 35.4 -202.6 -0.6C-203.2 -36.5 -156.4 -73.1 -114.7 -104.6C-73.1 -136.1 -36.5 -162.5 13.1 -175.6C62.7 -188.7 125.4 -188.4 154.7 -156.9"
+                fill="#818CF8"></path>
+            </g>
+          </svg>
         </div>
-      </div>
-    </div>
 
-    <div id="projects" class="h-fit flex flex-col pb-5 relative">
-      <!-- <div class="absolute z-[-1] left-0 right-0 top-0 bottom-0 mx-auto my-auto">
-        <img src="/Wave Line.svg" class="w-full"/>
-      </div> -->
-      <div class="hidden sm:hidden lg:block lg:absolute sm:z-[-1]">
-        <img src="/blob2-haikei.svg" alt="blob-haikei-outlined" class="w-full m-auto">
-      </div>
-      <h1 class="text-6xl text-center mb-4 mt-4 text-slate-950 font-Poppins bg-red-500 rounded-full w-fit m-auto p-5">
-        Projects</h1>
-      <!-- Projects Container  -->
-      <div class="flex h-fit flex-wrap sm:gap-7 justify-center mt-10 max-w-full lg:max-w-[80%] m-auto">
-
-
-        <!-- Card -->
-        <div class="transition-all ease-in sm:max-w-sm p-6 flex flex-col justify-between
-          bg-white border sm:rounded-xl shadow hover:shadow-md hover:bg-slate-50">
-          <a href="https://github.com/joshuapinto470/Angler">
-            <h5 class="mb-2 text-4xl font-semibold tracking-tighter text-primary-text text-center">AnglerRT</h5>
+        <div class="text-center max-w-3xl mx-auto z-10">
+          <h1 class="text-5xl sm:text-7xl font-bold mb-4 text-slate-900 font-Poppins tracking-tight">Joshua Pinto</h1>
+          <a class="inline-block text-lg text-slate-600 hover:text-indigo-600 hover:underline transition-colors font-Roboto mb-10"
+            href="mailto:joshuapinto.470@gmail.com">
+            joshuapinto470@gmail.com
           </a>
-          <p class="mb-3 text-xl font-normal text-slate-900 text-center font-Roboto">A physically based ray tracing
-            engine written
-            in C++. With
-            Live render view using OpenGL.
+
+          <div
+            class="flex flex-wrap gap-6 justify-center p-5 bg-white/60 backdrop-blur-sm border border-slate-200 rounded-2xl w-fit m-auto shadow-sm">
+            <img class="h-9 hover:scale-110 transition-transform" src="/cpp_icon.svg" alt="C++" title="C++" />
+            <img class="h-9 hidden md:block hover:scale-110 transition-transform" src="/linux_icon.svg" alt="Linux"
+              title="Linux" />
+            <img class="h-9 hover:scale-110 transition-transform" src="/javascript_icon.svg" alt="JavaScript"
+              title="JavaScript" />
+            <img class="h-9 hover:scale-110 transition-transform" src="/react_icon.svg" alt="React" title="React" />
+            <img class="h-9 hover:scale-110 transition-transform" src="/mongodb_icon.svg" alt="MongoDB" title="MongoDB">
+            <img class="h-9 hover:scale-110 transition-transform" src="/tailwind_icon.svg" alt="Tailwind CSS"
+              title="Tailwind CSS" />
+            <img class="h-9 hover:scale-110 transition-transform" src="/nodejs_icon.svg" alt="Node.js"
+              title="Node.js" />
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+          <h2 class="text-3xl font-bold mb-12 text-slate-900 font-Poppins border-l-4 border-indigo-600 pl-4">Education &
+            Certifications</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+              <span class="text-indigo-600 font-semibold text-sm tracking-wider uppercase">Degree</span>
+              <h3 class="text-xl font-bold text-slate-900 mt-2">B.S. Mathematics</h3>
+              <p class="text-slate-600">St. Xavier's College Mapusa • 2020</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+              <span class="text-indigo-600 font-semibold text-sm tracking-wider uppercase">Degree</span>
+              <h3 class="text-xl font-bold text-slate-900 mt-2">M.S. Mathematics</h3>
+              <p class="text-slate-600">Sanquelim College • 2022</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+              <span class="text-indigo-600 font-semibold text-sm tracking-wider uppercase">Degree</span>
+              <h3 class="text-xl font-bold text-slate-900 mt-2">Master in Computer Applications</h3>
+              <p class="text-slate-600">Jain University Bangalore • 2026</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="py-24 px-4 relative bg-white">
+        <div class="hidden lg:block lg:absolute top-0 w-full opacity-30 z-0 pointer-events-none" aria-hidden="true">
+          <img src="/blob2-haikei.svg" alt="" class="w-full max-w-5xl m-auto">
+        </div>
+
+        <div class="max-w-6xl mx-auto relative z-10">
+          <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-slate-900 font-Poppins">
+            Featured Projects
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <article
+              class="group flex flex-col bg-slate-50 border border-slate-200 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden p-8">
+              <div class="flex-grow">
+                <a href="https://github.com/joshuapinto470/Angler" target="_blank" rel="noopener noreferrer"
+                  class="inline-block mb-4">
+                  <h3
+                    class="text-2xl font-bold text-slate-900 font-Poppins group-hover:text-indigo-600 transition-colors">
+                    AnglerRT</h3>
+                </a>
+                <p class="text-slate-600 font-Roboto leading-relaxed mb-6">
+                  A physically based ray tracing engine written in C++. Features a live render view using OpenGL.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-3 pt-6 border-t border-slate-200 mt-auto">
+                <img class="h-8" src="/cpp_icon.svg" alt="C++" title="C++" />
+                <img class="h-8" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Opengl-logo.svg" alt="OpenGL"
+                  title="OpenGL" />
+                <img class="h-8" src="/linux_icon.svg" alt="Linux" title="Linux" />
+                <img class="h-8" src="/Cmake.svg" alt="CMake" title="CMake" />
+              </div>
+            </article>
+
+            <article
+              class="group flex flex-col bg-slate-50 border border-slate-200 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden p-8">
+              <div class="flex-grow">
+                <a href="https://github.com/joshuapinto470/CUDA-Slime-Mould" target="_blank" rel="noopener noreferrer"
+                  class="inline-block mb-4">
+                  <h3
+                    class="text-2xl font-bold text-slate-900 font-Poppins group-hover:text-indigo-600 transition-colors">
+                    Physarum Sim</h3>
+                </a>
+                <p class="text-slate-600 font-Roboto leading-relaxed mb-6">
+                  A simulation of physarum (slime mould) movement showcasing Cellular Automata. Written natively in
+                  CUDA.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-3 pt-6 border-t border-slate-200 mt-auto">
+                <img class="h-8" src="/cpp_icon.svg" alt="C++" title="C++" />
+                <img class="h-8" src="/nvidia_icon.svg" alt="CUDA" title="CUDA" />
+                <img class="h-8" src="/linux_icon.svg" alt="Linux" title="Linux" />
+              </div>
+            </article>
+
+            <article
+              class="group flex flex-col bg-slate-50 border border-slate-200 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden p-8">
+              <div class="flex-grow">
+                <a href="https://github.com/joshuapinto470/Chipper" target="_blank" rel="noopener noreferrer"
+                  class="inline-block mb-4">
+                  <h3
+                    class="text-2xl font-bold text-slate-900 font-Poppins group-hover:text-indigo-600 transition-colors">
+                    Chipper</h3>
+                </a>
+                <p class="text-slate-600 font-Roboto leading-relaxed mb-6">
+                  A full-stack Twitter clone built with modern web technologies, featuring a responsive UI and database
+                  integration.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-3 pt-6 border-t border-slate-200 mt-auto">
+                <img class="h-8" src="/javascript_icon.svg" alt="JavaScript" title="JavaScript" />
+                <img class="h-8" src="/react_icon.svg" alt="React" title="React" />
+                <img class="h-8" src="/mongodb_icon.svg" alt="MongoDB" title="MongoDB">
+                <img class="h-8" src="/tailwind_icon.svg" alt="Tailwind" title="Tailwind CSS" />
+                <img class="h-8" src="/nodejs_icon.svg" alt="Node.js" title="Node.js" />
+              </div>
+            </article>
+
+            <article
+              class="group flex flex-col bg-slate-50 border border-slate-200 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden p-8">
+              <div class="flex-grow">
+                <a href="https://github.com/joshuapinto470/CUDA-Mandelbrot-Set" target="_blank"
+                  rel="noopener noreferrer" class="inline-block mb-4">
+                  <h3
+                    class="text-2xl font-bold text-slate-900 font-Poppins group-hover:text-indigo-600 transition-colors">
+                    Mandelbrot Set</h3>
+                </a>
+                <p class="text-slate-600 font-Roboto leading-relaxed mb-6">
+                  High-performance generation of the Mandelbrot set utilizing parallel processing capabilities of Nvidia
+                  GPUs.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-3 pt-6 border-t border-slate-200 mt-auto">
+                <img class="h-8" src="/cpp_icon.svg" alt="C++" title="C++" />
+                <img class="h-8" src="/nvidia_icon.svg" alt="Nvidia CUDA" title="Nvidia CUDA" />
+                <img class="h-8" src="/windows_logo.svg" alt="Windows" title="Windows" />
+              </div>
+            </article>
+
+            <article
+              class="group flex flex-col bg-slate-50 border border-slate-200 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden p-8">
+              <div class="flex-grow">
+                <a href="https://github.com/joshuapinto470/joshuapinto470.github.io" target="_blank"
+                  rel="noopener noreferrer" class="inline-block mb-4">
+                  <h3
+                    class="text-2xl font-bold text-slate-900 font-Poppins group-hover:text-indigo-600 transition-colors">
+                    Portfolio Site</h3>
+                </a>
+                <p class="text-slate-600 font-Roboto leading-relaxed mb-6">
+                  The current portfolio website you are viewing. Built for speed, accessibility, and modern aesthetics.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-3 pt-6 border-t border-slate-200 mt-auto">
+                <img class="h-8" src="/html_icon.svg" alt="HTML5" title="HTML5">
+                <img class="h-8" src="/vite.svg" alt="Vite" title="Vite">
+                <img class="h-8" src="/tailwind_icon.svg" alt="Tailwind CSS" title="Tailwind CSS" />
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="bg-slate-900 text-slate-300 py-16">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6 text-white font-Poppins">Let's Connect</h2>
+        <p class="text-slate-400 mb-8 max-w-md mx-auto">
+          I'm currently open to new opportunities. Whether you have a question or just want to say hi, I'll try my best
+          to get back to you!
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
+          <a href="mailto:joshuapinto.470@gmail.com"
+            class="px-8 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-sm">
+            Say Hello
+          </a>
+          <a href="https://github.com/joshuapinto470" target="_blank" rel="noopener noreferrer"
+            class="px-8 py-3 bg-slate-800 text-white font-medium rounded-lg border border-slate-700 hover:bg-slate-700 transition-colors">
+            View GitHub
+          </a>
+        </div>
+
+        <div class="border-t border-slate-800 pt-8 flex flex-col items-center justify-center">
+          <p class="text-sm text-slate-500 font-Roboto">©
+            <script>document.write(new Date().getFullYear())</script> Joshua Pinto. Built with Tailwind CSS.
           </p>
-          <div id="tags" class="flex flex-wrap gap-3 justify-center bg-[#EEEDE7] rounded-3xl p-3 w-fit mx-auto">
-            <img class="h-10" src="/cpp_icon.svg" alt="cpp" />
-            <img class="h-10" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Opengl-logo.svg" alt="opengl"
-              title="opengl" />
-            <img class="h-10" src="/linux_icon.svg" alt="linux" />
-            <img class="h-10" src="/Cmake.svg" alt="cmake" title="CMake Build tool" />
-          </div>
+          <small class="text-xs text-slate-600 mt-2">All icons belong to their respective owners.</small>
         </div>
-
-        <!-- Card -->
-        <div class="transition-all ease-in sm:max-w-sm p-6 flex flex-col justify-between
-          bg-white border sm:rounded-xl shadow hover:shadow-md hover:bg-slate-50">
-          <a href="https://github.com/joshuapinto470/CUDA-Slime-Mould">
-            <h5 class="mb-2 text-4xl font-semibold tracking-tighter text-primary-text text-center">Physarum Simulation
-            </h5>
-          </a>
-          <p class="mb-3 text-xl font-normal text-slate-900 text-center font-Roboto">A simulation of physarum (slime
-            mould) movement showcasing Cellular Automata. Written in CUDA.</p>
-          <div id="tags" class="flex gap-3 justify-center bg-[#EEEDE7] p-3 w-fit mx-auto rounded-3xl">
-            <img class="h-10" src="/cpp_icon.svg" alt="cpp" />
-            <img class="h-10" src="/nvidia_icon.svg" alt="CUDA" />
-            <img class="h-10" src="/linux_icon.svg" alt="linux" />
-          </div>
-        </div>
-
-        <!-- Card -->
-        <div class="transition-all ease-in sm:max-w-sm p-6 flex flex-col justify-between
-        bg-white border sm:rounded-xl shadow hover:shadow-md hover:bg-slate-50">
-          <a href="https://github.com/joshuapinto470/Chipper">
-            <h5 class="mb-2 text-4xl font-semibold tracking-tighter text-primary-text text-center">Chipper</h5>
-          </a>
-          <p class="mb-3 text-xl font-normal text-slate-900 text-center font-Roboto">Clone of Twitter. Written in React
-            and
-            Express.js and using mongoDB</p>
-          <div id="tags" class="flex flex-wrap gap-3 justify-center bg-[#EEEDE7] rounded-3xl p-3 w-fit mx-auto ">
-            <img class="h-10" src="/javascript_icon.svg" alt="javascript" />
-            <img class="h-10" src="/react_icon.svg" alt="react" />
-            <img src="/mongodb_icon.svg" alt="mongodb" class="h-10">
-            <img class="h-10" src="/tailwind_icon.svg" alt="tailwind" />
-            <img class="h-10" src="/nodejs_icon.svg" alt="nodejs" />
-          </div>
-        </div>
-
-        <!-- Card -->
-        <div class="transition-all ease-in w-full sm:max-w-sm p-6 flex flex-col justify-between  
-        bg-white border sm:rounded-xl shadow hover:shadow-md hover:bg-slate-50">
-          <a href="https://github.com/joshuapinto470/CUDA-Mandelbrot-Set">
-            <h5 class="mb-2 text-4xl font-semibold tracking-tighter text-primary-text text-center">Mandelbrot Set</h5>
-          </a>
-          <p class="mb-3 text-xl font-normal text-slate-900 text-center font-Roboto">Generate the Mandelbrot set in
-            CUDA.</br> Needs
-            a Nvidia GPU</p>
-          <div id="tags" class="flex gap-3 justify-center bg-[#EEEDE7] p-3 w-fit mx-auto rounded-3xl">
-            <img class="h-10" src="/cpp_icon.svg" alt="cpp" />
-            <img class="h-10" src="/nvidia_icon.svg" alt="nvidia" title="nvidia cuda" />
-            <img class="h-10" src="/windows_logo.svg" alt="windows" title="windows" />
-          </div>
-        </div>
-
-        <div class="transition-all ease-in sm:max-w-sm p-6 flex flex-col justify-between
-        bg-white border sm:rounded-xl shadow hover:shadow-md hover:bg-slate-50">
-          <a href="https://github.com/joshuapinto470/joshuapinto470.github.io">
-            <h5 class="mb-2 text-4xl font-semibold tracking-tighter text-primary-text text-center">Portfolio Site</h5>
-          </a>
-          <p class="mb-3 text-xl font-normal text-slate-900 text-center font-Roboto">My current portfolio website. Build
-            using HTML,
-            Tailwindcss and Vite.</p>
-          <div id="tags" class="flex gap-3 justify-center bg-[#EEEDE7] p-3 w-fit mx-auto rounded-3xl">
-            <img src="/html_icon.svg" alt="html icon" class="h-10" alt="html" title="html5">
-            <img src="/vite.svg" alt="vite" class="h-10" alt="vite" title="vite">
-            <img class="h-10" src="/tailwind_icon.svg" />
-          </div>
-        </div>
-
       </div>
-
-    </div>
-
-    <footer id="contact" class="flex flex-col bg-blue-600 text-slate-200 relative">
-      <div class="custom-shape-divider-top-1688470763">
-        <!-- <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path
-            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            class="shape-fill"></path>
-        </svg> -->
-      </div>
-      <h1 class="text-4xl mb-5 mt-10 pt-2 text-center">Contact Me</h1>
-      <div class="flex flex-col ml-2">
-        <a href="mailto: joshuapinto.470@gmail.com"><span>Send Email</span></a>
-        <p>Github: <span class="font-Roboto"><a href="https://github.com/joshuapinto470">joshuapinto470</a></span></p>
-      </div>
-      <small class="text-center py-2 mb-2">All icons belong to their owners respectively</small>
     </footer>
 
   </div>
