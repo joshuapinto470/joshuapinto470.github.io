@@ -15,17 +15,44 @@
     gtag('js', new Date());
     gtag('config', 'G-F5181E0W0G');
   </script>
+
+  <script>
+    // Fast-check theme before the rest of the DOM renders
+    if (localStorage.getItem('color-theme') === 'dark' ||
+      (!localStorage.getItem('color-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
 </head>
 
-<body class="bg-slate-50 text-slate-800 scroll-smooth antialiased selection:bg-indigo-100 selection:text-indigo-900">
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 scroll-smooth antialiased selection:bg-indigo-100 selection:text-indigo-900">
   <div id="app" class="relative">
 
-    <header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-md border-b border-slate-200">
+    <header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 dark:border-slate-800 backdrop-blur-md border-b border-slate-200">
       <nav aria-label="Main Navigation" class="max-w-6xl mx-auto px-6 py-4">
         <ul class="flex justify-center md:justify-end gap-8 text-sm font-medium font-Poppins">
-          <li><a href="#about" class="text-slate-600 hover:text-indigo-600 transition-colors">About</a></li>
-          <li><a href="#projects" class="text-slate-600 hover:text-indigo-600 transition-colors">Projects</a></li>
-          <li><a href="#contact" class="text-slate-600 hover:text-indigo-600 transition-colors">Contact</a></li>
+          <li><a href="#about"
+              class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a></li>
+          <li><a href="#projects"
+              class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Projects</a></li>
+          <li><a href="#contact"
+              class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a></li>
+
+          <li>
+            <button id="theme-toggle" aria-label="Toggle Dark Mode"
+              class="p-2 -mt-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:ring-2 hover:ring-indigo-400 transition-all">
+              <svg id="theme-toggle-light-icon" class="hidden dark:block w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z">
+                </path>
+              </svg>
+              <svg id="theme-toggle-dark-icon" class="dark:hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+              </svg>
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
@@ -33,7 +60,8 @@
     <main>
       <section id="about"
         class="relative flex flex-col justify-center items-center min-h-screen pt-20 px-4 overflow-hidden">
-        <div class="absolute z-[-1] opacity-40 mix-blend-multiply blur-3xl" aria-hidden="true">
+        <div class="absolute z-[-1] opacity-40 dark:opacity-20 mix-blend-multiply dark:mix-blend-screen blur-3xl"
+          aria-hidden="true">
           <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
             <g transform="translate(456.3573873234408 275.1535836099143)">
@@ -45,14 +73,14 @@
         </div>
 
         <div class="text-center max-w-3xl mx-auto z-10">
-          <h1 class="text-5xl sm:text-7xl font-bold mb-4 text-slate-900 font-Poppins tracking-tight">Joshua Pinto</h1>
-          <a class="inline-block text-lg text-slate-600 hover:text-indigo-600 hover:underline transition-colors font-Roboto mb-10"
+          <h1 class="text-5xl sm:text-7xl font-bold mb-4 text-slate-900 dark:text-white font-Poppins tracking-tight">Joshua Pinto</h1>
+          <a class="inline-block text-lg text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:underline transition-colors font-Roboto mb-10"
             href="mailto:joshuapinto.470@gmail.com">
             joshuapinto470@gmail.com
           </a>
 
           <div
-            class="flex flex-wrap gap-6 justify-center p-5 bg-white/60 backdrop-blur-sm border border-slate-200 rounded-2xl w-fit m-auto shadow-sm">
+            class="flex flex-wrap gap-6 justify-center p-5 bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm border border-slate-200 dark:border-slate-800 rounded-2xl w-fit m-auto shadow-sm">
             <img class="h-9 hover:scale-110 transition-transform" src="/cpp_icon.svg" alt="C++" title="C++" />
             <img class="h-9 hidden md:block hover:scale-110 transition-transform" src="/linux_icon.svg" alt="Linux"
               title="Linux" />
@@ -68,59 +96,59 @@
         </div>
       </section>
 
-      <section id="education" class="py-20 bg-gradient-to-b from-slate-50 to-white">
+      <section id="education" class="py-20 bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900">
         <div class="max-w-6xl mx-auto px-6">
-          <h2 class="text-3xl font-bold mb-12 text-slate-900 font-Poppins border-l-4 border-indigo-600 pl-4">Education &
+          <h2 class="text-3xl font-bold mb-12 text-slate-900 dark:text-slate-100 font-Poppins border-l-4 border-indigo-600 pl-4">Education &
             Certifications</h2>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-              <span class="text-indigo-600 font-semibold text-sm tracking-wider uppercase">Degree</span>
-              <h3 class="text-xl font-bold text-slate-900 mt-2">B.S. Mathematics</h3>
-              <p class="text-slate-600">St. Xavier's College Mapusa • 2020</p>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 dark:bg-slate-800/50 dark:border-slate-700">
+              <span class="text-indigo-600 dark:text-indigo-400 font-semibold text-sm tracking-wider uppercase">Degree</span>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mt-2">B.S. Mathematics</h3>
+              <p class="text-slate-600 dark:text-slate-400">St. Xavier's College Mapusa • 2020</p>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-              <span class="text-indigo-600 font-semibold text-sm tracking-wider uppercase">Degree</span>
-              <h3 class="text-xl font-bold text-slate-900 mt-2">M.S. Mathematics</h3>
-              <p class="text-slate-600">Sanquelim College • 2022</p>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 dark:bg-slate-800/50 dark:border-slate-700">
+              <span class="text-indigo-600 dark:text-indigo-400 font-semibold text-sm tracking-wider uppercase">Degree</span>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mt-2">M.S. Mathematics</h3>
+              <p class="text-slate-600 dark:text-slate-400">Sanquelim College • 2022</p>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-              <span class="text-indigo-600 font-semibold text-sm tracking-wider uppercase">Degree</span>
-              <h3 class="text-xl font-bold text-slate-900 mt-2">Master in Computer Applications</h3>
-              <p class="text-slate-600">Jain University Bangalore • 2026</p>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 dark:bg-slate-800/50 dark:border-slate-700">
+              <span class="text-indigo-600 dark:text-indigo-400 font-semibold text-sm tracking-wider uppercase">Degree</span>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mt-2">Master in Computer Applications</h3>
+              <p class="text-slate-600 dark:text-slate-400">Jain University Bangalore • 2026</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="projects" class="py-24 px-4 relative bg-white">
-        <div class="hidden lg:block lg:absolute top-0 w-full opacity-30 z-0 pointer-events-none" aria-hidden="true">
+      <section id="projects" class="py-24 px-4 relative bg-white dark:bg-slate-900">
+        <div class="hidden lg:block lg:absolute top-0 w-full opacity-30 dark:opacity-5 z-0 pointer-events-none" aria-hidden="true">
           <img src="/blob2-haikei.svg" alt="" class="w-full max-w-5xl m-auto">
         </div>
 
         <div class="max-w-6xl mx-auto relative z-10">
-          <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-slate-900 font-Poppins">
+          <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-slate-900 dark:text-white font-Poppins">
             Featured Projects
           </h2>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             <article
-              class="group flex flex-col bg-slate-50 border border-slate-200 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden p-8">
+              class="group flex flex-col bg-slate-50 border border-slate-200 dark:bg-slate-950 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden p-8">
               <div class="flex-grow">
                 <a href="https://github.com/joshuapinto470/Angler" target="_blank" rel="noopener noreferrer"
                   class="inline-block mb-4">
                   <h3
-                    class="text-2xl font-bold text-slate-900 font-Poppins group-hover:text-indigo-600 transition-colors">
+                    class="text-2xl font-bold text-slate-900 dark:text-white font-Poppins group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                     AnglerRT</h3>
                 </a>
-                <p class="text-slate-600 font-Roboto leading-relaxed mb-6">
+                <p class="text-slate-600 dark:text-slate-400 font-Roboto leading-relaxed mb-6">
                   A physically based ray tracing engine written in C++. Features a live render view using OpenGL.
                 </p>
               </div>
-              <div class="flex flex-wrap gap-3 pt-6 border-t border-slate-200 mt-auto">
+              <div class="flex flex-wrap gap-3 pt-6 border-t border-slate-200 dark:border-slate-800 mt-auto">
                 <img class="h-8" src="/cpp_icon.svg" alt="C++" title="C++" />
                 <img class="h-8" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Opengl-logo.svg" alt="OpenGL"
                   title="OpenGL" />
@@ -130,20 +158,20 @@
             </article>
 
             <article
-              class="group flex flex-col bg-slate-50 border border-slate-200 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden p-8">
+              class="group flex flex-col bg-slate-50 border border-slate-200 dark:bg-slate-950 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden p-8">
               <div class="flex-grow">
                 <a href="https://github.com/joshuapinto470/CUDA-Slime-Mould" target="_blank" rel="noopener noreferrer"
                   class="inline-block mb-4">
                   <h3
-                    class="text-2xl font-bold text-slate-900 font-Poppins group-hover:text-indigo-600 transition-colors">
+                    class="text-2xl font-bold text-slate-900 dark:text-white font-Poppins group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                     Physarum Simulation</h3>
                 </a>
-                <p class="text-slate-600 font-Roboto leading-relaxed mb-6">
+                <p class="text-slate-600 dark:text-slate-400 font-Roboto leading-relaxed mb-6">
                   A simulation of physarum (slime mould) movement showcasing Cellular Automata. Written natively in
                   CUDA.
                 </p>
               </div>
-              <div class="flex flex-wrap gap-3 pt-6 border-t border-slate-200 mt-auto">
+              <div class="flex flex-wrap gap-3 pt-6 border-t border-slate-200 dark:border-slate-800 mt-auto">
                 <img class="h-8" src="/cpp_icon.svg" alt="C++" title="C++" />
                 <img class="h-8" src="/nvidia_icon.svg" alt="CUDA" title="CUDA" />
                 <img class="h-8" src="/linux_icon.svg" alt="Linux" title="Linux" />
@@ -151,20 +179,20 @@
             </article>
 
             <article
-              class="group flex flex-col bg-slate-50 border border-slate-200 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden p-8">
+              class="group flex flex-col bg-slate-50 border border-slate-200 dark:bg-slate-950 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden p-8">
               <div class="flex-grow">
                 <a href="https://github.com/joshuapinto470/Chipper" target="_blank" rel="noopener noreferrer"
                   class="inline-block mb-4">
                   <h3
-                    class="text-2xl font-bold text-slate-900 font-Poppins group-hover:text-indigo-600 transition-colors">
+                    class="text-2xl font-bold text-slate-900 dark:text-white font-Poppins group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                     Chipper</h3>
                 </a>
-                <p class="text-slate-600 font-Roboto leading-relaxed mb-6">
+                <p class="text-slate-600 dark:text-slate-400 font-Roboto leading-relaxed mb-6">
                   A full-stack Twitter clone built with modern web technologies, featuring a responsive UI and database
                   integration.
                 </p>
               </div>
-              <div class="flex flex-wrap gap-3 pt-6 border-t border-slate-200 mt-auto">
+              <div class="flex flex-wrap gap-3 pt-6 border-t border-slate-200 dark:border-slate-800 mt-auto">
                 <img class="h-8" src="/javascript_icon.svg" alt="JavaScript" title="JavaScript" />
                 <img class="h-8" src="/react_icon.svg" alt="React" title="React" />
                 <img class="h-8" src="/mongodb_icon.svg" alt="MongoDB" title="MongoDB">
@@ -174,20 +202,20 @@
             </article>
 
             <article
-              class="group flex flex-col bg-slate-50 border border-slate-200 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden p-8">
+              class="group flex flex-col bg-slate-50 border border-slate-200 dark:bg-slate-950 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden p-8">
               <div class="flex-grow">
                 <a href="https://github.com/joshuapinto470/CUDA-Mandelbrot-Set" target="_blank"
                   rel="noopener noreferrer" class="inline-block mb-4">
                   <h3
-                    class="text-2xl font-bold text-slate-900 font-Poppins group-hover:text-indigo-600 transition-colors">
+                    class="text-2xl font-bold text-slate-900 dark:text-white font-Poppins group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                     Mandelbrot Set</h3>
                 </a>
-                <p class="text-slate-600 font-Roboto leading-relaxed mb-6">
+                <p class="text-slate-600 dark:text-slate-400 font-Roboto leading-relaxed mb-6">
                   High-performance generation of the Mandelbrot set utilizing parallel processing capabilities of Nvidia
                   GPUs.
                 </p>
               </div>
-              <div class="flex flex-wrap gap-3 pt-6 border-t border-slate-200 mt-auto">
+              <div class="flex flex-wrap gap-3 pt-6 border-t border-slate-200 dark:border-slate-800 mt-auto">
                 <img class="h-8" src="/cpp_icon.svg" alt="C++" title="C++" />
                 <img class="h-8" src="/nvidia_icon.svg" alt="Nvidia CUDA" title="Nvidia CUDA" />
                 <img class="h-8" src="/windows_logo.svg" alt="Windows" title="Windows" />
@@ -195,19 +223,19 @@
             </article>
 
             <article
-              class="group flex flex-col bg-slate-50 border border-slate-200 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden p-8">
+              class="group flex flex-col bg-slate-50 border border-slate-200 dark:bg-slate-950 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden p-8">
               <div class="flex-grow">
                 <a href="https://github.com/joshuapinto470/joshuapinto470.github.io" target="_blank"
                   rel="noopener noreferrer" class="inline-block mb-4">
                   <h3
-                    class="text-2xl font-bold text-slate-900 font-Poppins group-hover:text-indigo-600 transition-colors">
+                    class="text-2xl font-bold text-slate-900 dark:text-white font-Poppins group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                     Portfolio Site</h3>
                 </a>
-                <p class="text-slate-600 font-Roboto leading-relaxed mb-6">
+                <p class="text-slate-600 dark:text-slate-400 font-Roboto leading-relaxed mb-6">
                   The current portfolio website you are viewing. Built for speed, accessibility, and modern aesthetics.
                 </p>
               </div>
-              <div class="flex flex-wrap gap-3 pt-6 border-t border-slate-200 mt-auto">
+              <div class="flex flex-wrap gap-3 pt-6 border-t border-slate-200 dark:border-slate-800 mt-auto">
                 <img class="h-8" src="/html_icon.svg" alt="HTML5" title="HTML5">
                 <img class="h-8" src="/vite.svg" alt="Vite" title="Vite">
                 <img class="h-8" src="/tailwind_icon.svg" alt="Tailwind CSS" title="Tailwind CSS" />
@@ -248,7 +276,7 @@
     </footer>
 
   </div>
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="./main.js"></script>
 </body>
 
 </html>

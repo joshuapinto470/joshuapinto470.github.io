@@ -20,26 +20,15 @@ body,
     -webkit-text-size-adjust: 100%;
 }
 
-.custom-shape-divider-top-1688470763 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+body,
+header,
+article,
+div,
+section {
+    transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease;
 }
 
-.custom-shape-divider-top-1688470763 svg {
-    position: relative;
-    display: block;
-    width: calc(124% + 1.3px);
-    height: 58px;
-}
-
-.custom-shape-divider-top-1688470763 .shape-fill {
-    fill: #FFFFFF;
-}
-
-.hero-page {
-    background-image: url('/grid.svg');
+/* Prevent transitions on page load to avoid a "slow-motion" first render */
+.no-transition {
+    transition: none !important;
 }
